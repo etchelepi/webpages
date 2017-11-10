@@ -1,0 +1,96 @@
+/* entire container, keeps perspective */
+body {
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+
+}
+
+.info-container {
+ margin-top: 10%;
+}
+
+.Info {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: white;
+	margin: 10px;
+	padding: 0;
+	font-size: 22;
+}
+
+.bg {
+ width: 100%;
+ position: absolute;
+ top: 0; left: 0; right: 0; bottom: 0;
+ margin: auto;
+ 
+ z-index: -1;
+}
+.FrontLOGO {
+	height: 40%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	margin: auto;
+	z-index: 1;
+}
+
+.Back {
+	background-color: 80c0bb;
+}
+
+.flip-container {
+	perspective: 1000;
+	overflow: hidden;
+	height: 300px;
+	width: 550px;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	border:1px solid #dbdbdb;
+    margin: auto;
+	text-align: center;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	height: 300px;
+	width: 550px;
+	
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 4;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	background-color: white;
+	
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+
+}

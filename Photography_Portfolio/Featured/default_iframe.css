@@ -1,0 +1,102 @@
+
+/******************************************************************************
+This Provides the top level decorations
+******************************************************************************/
+
+html, body {
+  font-size: 100%;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+/*default*/
+@media all and (min-width: 501px) {
+figure,img {
+  height: 100%;
+}
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+	body {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+	
+	}
+figure,img {
+  width: 100%;
+}
+}
+
+
+/******************************************************************************
+Begin slider Pane definitions:
+	This should provide the markup to create the scrollable sliding window
+	container that has all the photos within for display
+******************************************************************************/
+
+/*This is the Nav Bar subsection to make sure the nav bar isn't ugly*/
+::-webkit-scrollbar
+{
+  height: .5em; /* for horizontal scrollbars */
+  width: .5em;
+}
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.0);
+}
+::-webkit-scrollbar-thumb
+{
+  background: rgba(172, 214, 211, 0.4);
+}
+
+
+/******************************************************************************
+Image Container Defintions:
+	This styles the image container, along with the next that displays over it
+******************************************************************************/
+
+figure {
+  display: block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0 0 0 0;
+  flex: none;
+}
+
+
+
+figcaption {
+  position: absolute;
+  font-size: 14pt;
+  background: black;
+  background: rgba(0,0,0,0.2);
+  color: white;
+  padding-top: 0;
+  padding-left: 5px;
+  height: 60px;
+  width: 100%;
+  opacity: .5;
+  text-align: left;
+  line-height: 150%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  background: rgba(0,0,0,0.5);
+}
+
+.img-fig figcaption { left: 0; bottom: -32px;}
+.img-fig:hover figcaption { bottom: 0; }
