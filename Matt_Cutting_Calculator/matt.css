@@ -1,0 +1,267 @@
+html, body {
+	font-size: 100%;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	height: 100%;
+	background-color: #666666;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: 0;
+}
+/******************************************************************************
+* TOP FORM CSS markup
+******************************************************************************/
+#head_bar {
+	background-color: #dddddd;
+	width: 100%;
+	color: red;
+	height: 5%;
+	z-index:3;
+	box-shadow: 5px 5px rgba(0,0,0,0.35);
+}
+
+/******************************************************************************
+* SIDE FORM CSS markup
+******************************************************************************/
+#form_elm {
+	border:2px solid #456879;
+	border-radius:10px; /* Rounded Corner */
+	height: 1em;
+	width: 35%;
+	font-size: .8em;
+	text-align: center;
+}
+
+#sidebar_form {
+	font-size: 1.1em;
+	text-align: center;
+	line-height: 150%;
+	margin-left: 3%;
+}
+
+#side_bar {
+	background-color: #dddddd;
+	height: 90%;
+	width: 20%;
+	
+	z-index:3;
+	box-shadow: 5px 5px rgba(0,0,0,0.35);
+}
+
+#sidebar_headers {
+	font-size: 1.1em;
+	text-align: left;
+
+}
+
+#arrow_test{
+  font-size: 125%;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  color: yellow;
+  position: absoulte;
+  top: 50%;
+  left: 100%;
+  z-index: 105;
+  align-items: left-side;
+  display: inline;
+}
+
+/******************************************************************************
+* BOARD CSS markup
+* Board defines the shape and size and location of the mat we are using
+******************************************************************************/
+#work_space{
+	width: 75%;
+	height: 90%;
+	display: flex;
+  	display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:1;
+}
+
+#overmat{
+	width:200px;
+    height:300px;
+	border-style: none;
+	border-color: white;
+	border-width: 100px 100px 150px 175px;
+	text-align: center;
+	overflow: hidden;
+	z-index: 100;
+	/*box-shadow: 7px 7px rgba(0,0,0,0.35);*/
+	box-shadow: inset 1px 10px red, inset -10px -10px blue;
+
+}
+
+#undermat{
+	width:100px;
+    height:100px;
+	border-style: none;
+	border-color: white;
+	border-width: 100px 100px 150px 175px;
+	left: 0;
+	position:relative;
+	z-index:-1;
+
+}
+
+/******************************************************************************
+* RULERS FORM CSS markup
+******************************************************************************/
+#ruler_bar_right {
+	background-color: rgba(50,50,50,1.0);
+	height: 90%;
+	width: 5%;
+	z-index:2;
+	position:relative;
+	overflow: hidden;
+}
+
+#right_ruler {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position:absolute;
+	list-style: none;
+	bottom: 0px;
+	display: inline;
+	color: white;
+}
+
+/*Sub zone, ruler formatting*/
+#height_limit{
+	position:absolute;
+	bottom: 125px;
+}
+#height_limit_img{
+	position:absolute;
+}
+
+#height_overmat_end{
+	position:absolute;
+	bottom: 100px;
+}
+#height_overmat_end_img{
+	position:absolute;
+}
+
+#height_undermat_end{
+	position:absolute;
+	bottom: 75px;
+}
+#height_undermat_end_img{
+	position:absolute;
+}
+
+#height_undermat_start{
+	position:absolute;
+	bottom: 50px;
+}
+#height_undermat_start_img{
+	position:absolute;
+}
+
+#height_overmat_start{
+	position:absolute;
+	bottom: 25px;
+}
+#height_overmat_start_img{
+	position:absolute;
+}
+
+#height_orgin{
+	position:absolute;
+	bottom: 0px;
+}
+#height_orgin_img{
+	position:absolute;
+}
+/*End right ruler formatting*/
+
+
+
+#fill_bar_bottom {
+	background-color: #dddddd;
+	height: 5%;
+	width: 20%;
+	z-index:4;
+	box-shadow: 5px 5px rgba(0,0,0,0.35);
+}
+
+#fill_bar_corner {
+	background-color: #dddddd;
+	height: 5%;
+	width: 5%;
+	z-index:4;
+	box-shadow: 5px 5px rgba(0,0,0,0.35);
+}
+
+#ruler_bar_bottom {
+	background-color: rgba(255,128,0,0.35);
+	height: 5%;
+	width: 75%;
+	z-index:2;
+	position:relative;
+	overflow: hidden;
+	
+}
+
+#bottom_ruler {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position:absolute;
+	list-style: none;
+	bottom: 0px;
+	display: inline;
+	color: white;
+}
+/*Start Bottom Ruler Formatting*/
+#b_height_limit{
+	position:absolute;
+	bottom: 125px;
+}
+#b_height_limit_img{
+	position:absolute;
+}
+#b_height_overmat_end{
+	position:absolute;
+	bottom: 100px;
+}
+#b_height_overmat_end_img{
+	position:absolute;
+}
+#b_height_undermat_end{
+	position:absolute;
+	bottom: 75px;
+}
+#b_height_undermat_end_img{
+	position:absolute;
+}
+#b_height_undermat_start{
+	position:absolute;
+	bottom: 50px;
+}
+#b_height_undermat_start_img{
+	position:absolute;
+}
+#b_height_overmat_start{
+	position:absolute;
+	bottom: 25px;
+}
+#b_height_overmat_start_img{
+	position:absolute;
+}
+#b_height_orgin{
+	position:absolute;
+	bottom: 0px;
+}
+#b_height_orgin_img{
+	position:absolute;
+}
+/*End Bottom Ruler Formatting*/
